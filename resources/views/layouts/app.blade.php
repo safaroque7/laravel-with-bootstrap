@@ -10,6 +10,7 @@
 
     
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-icons.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/jquery.dataTables.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     
 </head>
@@ -18,7 +19,7 @@
         <div class="row bg-dark">
             <div class="d-flex justify-content-between align-items-center">
                 <h2 class="text-white">
-                    <a href="dashboard.html" class="text-white text-decoration-none">
+                    <a href="{{ route('dashboard') }}" class="text-white text-decoration-none">
                         Dashboard
                     </a>
                 </h2>
@@ -71,7 +72,7 @@
                 </li>
 
                 <li class="nav-item border-bottom">
-                    <a class="nav-link text-white" href="add-new-service.html">
+                    <a class="nav-link text-white" href="{{ route('add-new-service') }}">
                         <i class="bi bi-grid-3x3-gap-fill pe-md-3 pe-2"></i>Add New Service
                         <span class="text-white me-md-3 me-2 float-end"> 120 </span>
                     </a>
@@ -98,13 +99,12 @@
         <!-- dashboard navbar end -->
 
         @yield('content')
+        @yield('add-new-service')
 
     </div>
 
-    {{-- 	
-
   <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
-  <script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script> --}}
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 
     <script>
         $(function() {
