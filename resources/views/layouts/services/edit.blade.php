@@ -10,7 +10,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">
-                    Facebook revidw left phone
+                    Facebook review left phone
                 </li>
             </ol>
         </nav>

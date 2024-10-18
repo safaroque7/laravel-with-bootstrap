@@ -26,7 +26,7 @@
 
                 <div class="time-and-date-par">
                     <h5 class="mb-0 text-white">
-                        Friday, 30 September 2024 <i class="bi bi-dash"></i> 08:04 PM
+                        {{ $currentDayName . ', ' . $currentDay . ' ' . $currentMonth . ' ' . $currentYear }} <i class="bi bi-dash"></i> 08:04 PM
                     </h5>
                 </div>
 
