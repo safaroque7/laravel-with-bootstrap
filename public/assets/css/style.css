@@ -5,3 +5,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+
+.image-size-custom {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}

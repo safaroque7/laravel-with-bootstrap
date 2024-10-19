@@ -56,7 +56,7 @@
         <div class="col-md-2 bg-dark vh-100 px-0">
             <ul class="nav flex-column">
                 <li class="nav-item border-bottom">
-                    <a class="nav-link text-white hover:bg-white hover:text-dark" href="all-clients.html">
+                    <a class="nav-link text-white" href="{{ route('all-clients') }}">
                         <i class="bi bi-people-fill pe-md-3 pe-2"></i>
                         All Cleints
                         <span class="text-white me-md-3 me-2 float-end"> 120 </span>
@@ -65,7 +65,7 @@
                 </li>
 
                 <li class="nav-item border-bottom">
-                    <a class="nav-link text-white" href="add-new-client.html">
+                    <a class="nav-link text-white" href="{{ route('add-new-client') }}">
                         <i class="bi bi-person-plus-fill pe-md-3 pe-2"></i> Add New Cleint
                         <span class="text-white me-md-3 me-2 float-end"> 120 </span>
                     </a>
@@ -100,6 +100,9 @@
 
         @yield('content')
         @yield('add-new-service')
+        @yield('add-new-client')
+        @yield('all-clients')
+        @yield('single-client-info')
 
     </div>
 
