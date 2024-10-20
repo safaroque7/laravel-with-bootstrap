@@ -12,7 +12,7 @@
 
             <!-- left arrow start -->
             <div class="col-md-1 d-flex align-items-center">
-                <h1> <a href="#"> <i class="bi bi-chevron-compact-left"></i> </a> </h1>
+                <h1> <a href="{{ URL::to('single-client-info/' . $previous) }}"> <i class="bi bi-chevron-compact-left"></i> </a> </h1>
             </div>
             <!-- left arrow end -->
 
@@ -90,7 +90,7 @@
 
             <!-- right arrow start -->
             <div class="col-md-1 d-flex align-items-center justify-content-end">
-                <h1> <a href="#"> <i class="bi bi-chevron-compact-right"></i> </a> </h1>
+                <h1> <a href="{{ URL::to('single-client-info/'. $next) }}"> <i class="bi bi-chevron-compact-right"></i> </a> </h1>
             </div>
             <!-- right arrow end -->
 

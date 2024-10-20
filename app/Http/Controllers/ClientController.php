@@ -119,10 +119,16 @@ class ClientController extends Controller
 
     //for showing single client information
     public function showSingleClientInfo($id){
+
         $singleClientInfo = Client::findOrFail($id);
+        $previous = Client::where('id', '<', $singleClientInfo->id)->max('id');
+        $next = Client::where('id', '>', $singleClientInfo->id)->min('id');
+        
 
         return view('layouts.client.single-client-info', [
             'singleClientInfo' => $singleClientInfo,
+            'previous' => $previous,
+            'next' => $next,
         ]);
     }
 

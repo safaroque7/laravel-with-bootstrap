@@ -8,12 +8,13 @@
     <title> Bootstrap with Laravel </title>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
-    
+
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap-icons.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/jquery.dataTables.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    
+
 </head>
+
 <body>
     <div class="container-fluid">
         <div class="row bg-dark">
@@ -26,7 +27,8 @@
 
                 <div class="time-and-date-par">
                     <h5 class="mb-0 text-white">
-                        {{ $currentDayName . ', ' . $currentDay . ' ' . $currentMonth . ' ' . $currentYear }} <i class="bi bi-dash"></i> 08:04 PM
+                        {{ $currentDayName . ', ' . $currentDay . ' ' . $currentMonth . ' ' . $currentYear }} <i
+                            class="bi bi-dash"></i> 08:04 PM
                     </h5>
                 </div>
 
@@ -40,8 +42,20 @@
                             <span class="text-white"><i class="bi bi-caret-down-fill"></i></span>
                         </div>
                         <ul class="dropdown-menu" aria-labelledby="profile1">
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li><a class="dropdown-item" href="#">Sign Out</a></li>
+
+                            <li><a class="dropdown-item" href="{{ route('profile.edit') }}">{{ __('Profile') }}</a></li>
+                            <li> <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                    {{ __('Log Out') }}
+                                </a> </li>
+
+
+                            <li>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -57,10 +71,10 @@
             <ul class="nav flex-column">
                 <li class="nav-item border-bottom">
                     <a class="nav-link text-white" href="{{ route('all-clients') }}">
-                        
+
                         <i class="bi bi-people-fill pe-md-3 pe-2"></i>
                         All Cleints
-                        <span class="text-white me-md-3 me-2 float-end"> {{ __($totalClient) }}  </span>
+                        <span class="text-white me-md-3 me-2 float-end"> {{ __($totalClient) }} </span>
                     </a>
 
                 </li>
@@ -107,8 +121,8 @@
 
     </div>
 
-  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
-  <script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.2.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 
     <script>
         $(function() {

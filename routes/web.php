@@ -38,9 +38,6 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/facebook-review-left-email', [ClientController::class, 'facebookReviewLeftEmail'])->name('facebook-review-left-email');
 
-
-
-
 });
 
 require __DIR__.'/auth.php';
