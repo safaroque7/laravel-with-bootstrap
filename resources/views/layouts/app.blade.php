@@ -57,9 +57,10 @@
             <ul class="nav flex-column">
                 <li class="nav-item border-bottom">
                     <a class="nav-link text-white" href="{{ route('all-clients') }}">
+                        
                         <i class="bi bi-people-fill pe-md-3 pe-2"></i>
                         All Cleints
-                        <span class="text-white me-md-3 me-2 float-end"> 120 </span>
+                        <span class="text-white me-md-3 me-2 float-end"> {{ __($totalClient) }}  </span>
                     </a>
 
                 </li>
@@ -67,28 +68,27 @@
                 <li class="nav-item border-bottom">
                     <a class="nav-link text-white" href="{{ route('add-new-client') }}">
                         <i class="bi bi-person-plus-fill pe-md-3 pe-2"></i> Add New Cleint
-                        <span class="text-white me-md-3 me-2 float-end"> 120 </span>
                     </a>
                 </li>
 
                 <li class="nav-item border-bottom">
                     <a class="nav-link text-white" href="{{ route('add-new-service') }}">
                         <i class="bi bi-grid-3x3-gap-fill pe-md-3 pe-2"></i>Add New Service
-                        <span class="text-white me-md-3 me-2 float-end"> 120 </span>
+                        <span class="text-white me-md-3 me-2 float-end"> {{ __($totalService) }} </span>
                     </a>
                 </li>
 
                 <li class="nav-item border-bottom">
-                    <a class="nav-link text-white" href="facebook-review-left-email.html">
+                    <a class="nav-link text-white" href="{{ route('facebook-review-left-email') }}">
                         <i class="bi bi-facebook pe-md-3 pe-2"></i>Facebook Review Left Email
-                        <span class="text-white me-md-3 me-2 float-end"> 120 </span>
+                        <span class="text-white me-md-3 me-2 float-end"> {{ __($facebookReview) }} </span>
                     </a>
                 </li>
 
                 <li class="nav-item border-bottom">
                     <a class="nav-link text-white" href="facebook-review-left-phone.html">
                         <i class="bi bi-facebook pe-md-3 pe-2"></i>Facebook Review Left Phone
-                        <span class="text-white me-md-3 me-2 float-end"> 120 </span>
+                        <span class="text-white me-md-3 me-2 float-end"> {{ __($facebookReview) }} </span>
                     </a>
                 </li>
 
@@ -103,6 +103,7 @@
         @yield('add-new-client')
         @yield('all-clients')
         @yield('single-client-info')
+        @yield('facebook-review-left-email')
 
     </div>
 

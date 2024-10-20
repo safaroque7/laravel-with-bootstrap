@@ -36,6 +36,11 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/single-client-info/{id}', [ClientController::class, 'showSingleClientInfo'])->name('single-client-info');
 
+    Route::get('/facebook-review-left-email', [ClientController::class, 'facebookReviewLeftEmail'])->name('facebook-review-left-email');
+
+
+
+
 });
 
 require __DIR__.'/auth.php';

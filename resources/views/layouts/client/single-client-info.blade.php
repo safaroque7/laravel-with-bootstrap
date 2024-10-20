@@ -4,7 +4,7 @@
     <div class="col-md-10 mt-md-3">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('all-clients') }}">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Client's Profile</li>
             </ol>
         </nav>

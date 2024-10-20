@@ -11,7 +11,7 @@
 
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="dashboard.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('all-clients') }}">Home</a></li>
                 <li class="breadcrumb-item active" aria-current="page">All Clients</li>
             </ol>
         </nav>
@@ -71,7 +71,7 @@
                             @endif
                         </td>
                         
-                        <td> <a href="single-profile.html" class="text-dark"> {{ __($clientItem->page_number) }}  </a> </td>
+                        <td> <a href="{{ route('single-client-info', $clientItem->id) }}" class="text-dark"> {{ __($clientItem->page_number) }}  </a> </td>
                         <td>
                             <div class="dropdown">
                                 <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"

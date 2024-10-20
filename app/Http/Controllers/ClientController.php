@@ -125,4 +125,15 @@ class ClientController extends Controller
             'singleClientInfo' => $singleClientInfo,
         ]);
     }
+
+
+    //for collecting facebook review left emails
+    public function facebookReviewLeftEmail(){
+        $facebookReviewLeftEmailCollection = Client::where('facebook_review', 0)->get(['email', 'phone']);
+
+        return view ('facebook.facebook-review-left-email', [
+            'facebookReviewLeftEmailCollection' => $facebookReviewLeftEmailCollection
+        ]);
+        
+    }
 }
